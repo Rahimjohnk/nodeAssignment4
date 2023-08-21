@@ -6,8 +6,20 @@
     <title><%= pageTitle%></title>
   </head>
   <body>
-    <ul>
-      <li>User1</li>
-    </ul>
+    <main>
+      <a href="/">Create user</a>
+      <% if(userNameList.length > 0) {%>
+      <div class="user-list">
+        <ul>
+          <% for(let user of userNameList) { %>
+          <li><%= user.userName%></li>
+          <% } %>
+        </ul>
+      </div>
+      <%} else { %>
+      <h1>No Products Found!</h1>
+      <a href="/">Create user</a>
+      <% } %>%>
+    </main>
   </body>
 </html>

@@ -24,7 +24,8 @@ router.use('/users', (req, res, next)=>{
     // console.log("/users => users", req.body.username);
     // res.sendFile(path.join(rootDir , 'views', 'users.html'));
     res.render('users', {
-        pageTitle: "Users"
+        pageTitle: "Users",
+        userNameList: users
     });
 });
 exports.routes = router;
