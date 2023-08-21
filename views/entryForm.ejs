@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= pageTitle %></title>
-    <link rel="stylesheet" href="/css/main.css" />
+<%- include('includes/head.ejs')%>
     <link rel="stylesheet" href="/css/entryForm.css" />
   </head>
   <body>
     <main>
+      
       <div class="center">
+        <h1>Enter your name and submit</h1>
         <form action="lists/users/" method="POST">
           <input type="text" name="username" />
           <button type="submit">Submit</button>
         </form>
       </div>
-    </main>
-  </body>
-</html>
+      <%- include('includes/end.ejs')%>

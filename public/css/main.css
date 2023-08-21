@@ -1,12 +1,15 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     /* height: 100vh; */
     background-color: lightgray;
 }
+
 .center {
-    display: flex;
+    display: grid;
     height: 100vh;
+    flex-direction: column;
+    align-content: center;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
 }
