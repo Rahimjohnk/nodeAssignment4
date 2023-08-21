@@ -3,11 +3,15 @@
 // npm i --seve express
 
 // npm i --save body-parser 
+// npm i --save ejs
 const path = require('path');
 
 const express = require('express');
 
 const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 const entryFormRoutes = require('./routes/entryForm');
 // const usersRoutes = require('./routes/users');

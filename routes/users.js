@@ -19,9 +19,13 @@ router.use('/users', (req, res, next)=>{
     // ********************************
     // without Templating Engines we can pass data into teplate is it ?
     // with templateing engines we can pass data easily. 
+    // for that we can use ejs template engine 
     // ********************************
     // console.log("/users => users", req.body.username);
-    res.sendFile(path.join(rootDir , 'views', 'users.html'));
+    // res.sendFile(path.join(rootDir , 'views', 'users.html'));
+    res.render('users', {
+        pageTitle: "Users"
+    });
 });
 exports.routes = router;
 exports.users = users;

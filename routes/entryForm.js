@@ -11,7 +11,10 @@ router.get('/', (req, res, next)=>{
     // res.send(`
     // <h1> entryForm Page</h1>
     // `);
-    res.sendFile(path.join(__dirname, '..' , 'views', 'entryForm.html'));
+    // res.sendFile(path.join(__dirname, '..' , 'views', 'entryForm.html'));
+    res.render('entryForm', {
+        pageTitle: "Entry Form"
+    });
 });
 
 module.exports = router;
