@@ -4,22 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= pageTitle%></title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/users.css" />
   </head>
   <body>
     <main>
-      <a href="/">Create user</a>
-      <% if(userNameList.length > 0) {%>
-      <div class="user-list">
-        <ul>
-          <% for(let user of userNameList) { %>
-          <li><%= user.userName%></li>
-          <% } %>
-        </ul>
+      <div class="users">
+        <a href="/">Create user</a>
+        <% if(userNameList.length > 0) {%>
+        <div class="user-list">
+          <ul>
+            <% for(let user of userNameList) { %>
+            <li><%= user.userName%></li>
+            <% } %>
+          </ul>
+        </div>
+        <%} else { %>
+        <h1>No Products Found!</h1>
+        <% } %>
       </div>
-      <%} else { %>
-      <h1>No Products Found!</h1>
-      <a href="/">Create user</a>
-      <% } %>%>
     </main>
   </body>
 </html>
