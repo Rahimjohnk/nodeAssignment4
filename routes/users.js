@@ -6,11 +6,12 @@ const express = require('express');
 const router = express.Router();
 
 // http://localhost:3000/lists/users
-router.get('/users', (req, res, next)=>{
-    console.log("/users => users");
-    res.send(`
-    <h1>Users Page</h1>
-    `);
+router.use('/users', (req, res, next)=>{
+    // console.log("/users => users");
+    // res.send(`
+    // <h1>Users Page</h1>
+    // `);
+    res.sendFile(path.join(rootDir , 'views', 'users.html'));
 });
 
 module.exports = router;
